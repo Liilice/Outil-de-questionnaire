@@ -1,0 +1,48 @@
+@use "./mediaQuerries" as mixin;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30rem;
+  @include mixin.xs {
+    max-width: 20rem;
+  }
+  @include mixin.xxs {
+    max-width: 18rem;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  .img {
+    max-width: 100%;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    input,
+    textarea,
+    select {
+      border: 1px solid rgb(188, 177, 177);
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+    }
+  }
+  .btn {
+    align-self: center;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    background-color: rgb(244, 217, 191);
+    width: fit-content;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    .icone {
+      margin-left: 0.5rem;
+      transform: rotate(320deg);
+    }
+  }
+}
